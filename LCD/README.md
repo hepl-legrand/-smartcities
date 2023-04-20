@@ -24,6 +24,17 @@ setCursor() pour positioner le curseur sur une ligne et une colonne et donc déf
 
 afin d'afficher la valeur analogique du potentiomètre au travers de la fonction print(), il est nécessaire de convertir cette valeur en un string à l'aide de la fonction str().
 
+##LCD - Temp - Humidity - Buzzer
+
+On créé les variables temp et humid qui recevront la valeur lue de la variable dht2 à l'aide de la fonction readTempHumid() qui renvoie la valeur de la température et de l'humidité.
+
+Ensuite on procède de la même manière que les fois précédente pour afficher les valeurs à l'écran. On clear(), définit la position du curseur pour l'affichage de chaque valeur à l'aide de setCursor(). setCursor(0,0) défini la première ligne et première colonne qui désigne la case à partir de laquelle le message contenant la valeur de "Temp" s'affichera. On convertit à nouveau cette valeur sous forme de string pour qu'elle soit affichable par la fonction "print()" à l'aide la fonction "str()".
+
+On reproduit la même manipulation pour la valeur de Humid qui sera affichée sur la 2ème ligne grace à setCursor(0,1).
+
+On créé ensuite une condition "if" et "else" pour faire sonner le buzzer lorsque la valeur de temp est supérieur à 30 ou que la valeur de humid est inférieure à 20. Sinon le buzzer ne fait pas de bruit.
+
+
 
 
 

@@ -11,7 +11,7 @@ clear() pour nettoyer l'affichage.
 print() pour afficher le message sur l'écran.
 setCursor() pour positioner le curseur sur une ligne et une colonne et donc définir la case à partir de laquelle le message commence à s'afficher.
 
-##Affichage des valeurs du Potentiomètre.
+## Affichage des valeurs du Potentiomètre.
 
 Afin d'utiliser le potentiomètre qui renvoie des valeurs analogiques, il est nécessaire d'utiliser la librairie ADC qui s'utilise comme la librairie Pin servant à spécifier sur quel connecteur la communication se fait.
 
@@ -24,7 +24,7 @@ setCursor() pour positioner le curseur sur une ligne et une colonne et donc déf
 
 afin d'afficher la valeur analogique du potentiomètre au travers de la fonction print(), il est nécessaire de convertir cette valeur en un string à l'aide de la fonction str().
 
-##LCD - Temp - Humidity - Buzzer
+## LCD - Temp - Humidity - Buzzer
 
 On créé les variables temp et humid qui recevront la valeur lue de la variable dht2 à l'aide de la fonction readTempHumid() qui renvoie la valeur de la température et de l'humidité.
 

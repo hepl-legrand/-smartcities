@@ -9,20 +9,30 @@ SOUND_SENSOR = ADC(1)
 
 
 while True:
+    average=0
     light = LIGHT_SENSOR.read_u16()/256
-    noise = SOUND_SENSOR.read_u16()/256
+    for i in range (1000):
+        
+        noise = SOUND_SENSOR.read_u16()/256
+        average += noise
+    noise= average /1000
     print('lumiere:'+str(light))
     print(' bruit :' + str(noise))
+    
     if light < 80:
         led.pixels_fill((255,255,255))
         led.pixels_show()
-        sleep(0.1)
+        sleep(0.2)
     else:
-        if noise > 10:
-            led.pixels_fill((255,0,0))
+        if noise < 20:
+            led.pixels_fill((0,255,0))
             led.pixels_show()
             sleep(1)
-        else:
-            led.pixels_fill((0,255,0))
+        if noise >=20 and noise <40:
+            led.pixels_fill((255,255,0))
+            led.pixels_show()
+            sleep(1)
+        if noise >= 40:
+            led.pixels_fill((255,0,0))
             led.pixels_show()
             sleep(1)
